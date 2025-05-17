@@ -325,7 +325,7 @@ export default function Flights() {
                     <Filter className="h-5 w-5 mr-2" />
                     Filters
                   </h3>
-                  <Button variant="ghost" size="sm" className="text-blue-600">
+                  <Button className="text-blue-600 bg-transparent hover:bg-gray-100 px-2 py-1 h-auto">
                     <RotateCw className="h-4 w-4 mr-1" />
                     Reset
                   </Button>
@@ -334,20 +334,20 @@ export default function Flights() {
                 {/* Price filter */}
                 <div className="mb-6">
                   <h4 className="font-medium mb-3">Price</h4>
-                  <div className="space-y-2">
+                    <div className="space-y-2">
                     <Slider
                       defaultValue={[500]}
                       max={1000}
                       step={10}
                       value={priceRange}
-                      onValueChange={(value) => setPriceRange(value)}
+                      onValueChange={(value: number[]) => setPriceRange(value)}
                     />
                     <div className="flex justify-between">
                       <span className="text-sm text-gray-500">$0</span>
                       <span className="text-sm font-medium">${priceRange[0]}</span>
                       <span className="text-sm text-gray-500">$1000</span>
                     </div>
-                  </div>
+                    </div>
                 </div>
 
                 {/* Stops filter */}
