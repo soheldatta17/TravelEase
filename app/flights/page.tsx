@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { ArrowDown, Filter, Clock, Coffee, Wifi, Plug, RotateCw, ArrowDownUp, Plane, Plane as PlaneDown } from "lucide-react";
+import { ArrowDown, Filter, Clock, Coffee, Wifi, Plug, RotateCw, ArrowDownUp, Plane as PlaneDown } from "lucide-react";
 import FlightSearch from "@/components/home/flight-search";
 
 // Sample flight data
@@ -181,7 +181,7 @@ function FlightCard({ flight }: { flight: any }) {
           {/* Flight path visualization */}
           <div className="col-span-6 md:col-span-6 px-2">
             <div className="flex items-center justify-between">
-              <Plane className="h-4 w-4 text-gray-400" />
+              <PlaneDown className="h-4 w-4 text-gray-400" />
               <div className="flex-1 mx-2 relative">
                 <div className="border-t border-dashed border-gray-300"></div>
                 {flight.stops > 0 && (
